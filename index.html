@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Clock</title>
+
+  <!-- 下記の <style>~</style> の中身をいじることで見た目を変えれます -->
+  <style>
+body {
+  font-family: 'Courier New', monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  transition: background 1s, color 1s;
+}
+
+#container {
+  text-align: center;
+}
+
+#clock {
+  font-size: 5rem;
+  text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+}
+
+#date {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 5px currentColor;
+}
+
+/* === それぞれ上から朝昼夕夜で、backgroundのいろをいじると背景色変えれるよ === */
+.morning {
+  background: #FFF8E1;
+  color: #333;
+}
+
+.day {
+  background: #E0F7FA;
+  color: #000;
+}
+
+.evening {
+  background: #FFDAB9;
+  color: #333;
+}
+
+.night {
+  background: #111;
+  color: #0f0;
+}
+  </style>
+
+
+</head>
+<body>
+  <div id="container">
+    <div id="date">----/--/-- (---)</div>
+    <div id="clock">--:--:--</div>
+  </div>
+
+  <script src="ClockScript.js"></script>
+</body>
+</html>
